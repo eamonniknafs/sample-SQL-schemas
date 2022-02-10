@@ -36,7 +36,6 @@ CREATE TABLE Artwork_Group {
     group_name varchar(255) NOT NULL,
     CONSTRAINT fk_artwork FOREIGN KEY (artwork_title) REFERENCES Artworks(title),
     CONSTRAINT fk_group FOREIGN KEY (group_name) REFERENCES Groups(name),
-    CONSTRAINT pk_artwork_group PRIMARY KEY (artwork_title, group_name),
 }
 
 CREATE TABLE Customers {
@@ -51,7 +50,6 @@ CREATE TABLE Liked_Groups{
     group_name varchar(255) NOT NULL,
     CONSTRAINT fk_customer FOREIGN KEY (customer_name) REFERENCES Customers(name),
     CONSTRAINT fk_group FOREIGN KEY (group_name) REFERENCES Groups(name),
-    CONSTRAINT pk_liked_groups PRIMARY KEY (customer_name, group_name),
 }
 
 CREATE TABLE Liked_Artists {
@@ -59,5 +57,4 @@ CREATE TABLE Liked_Artists {
     artist_name varchar(255) NOT NULL,
     CONSTRAINT fk_customer FOREIGN KEY (customer_name) REFERENCES Customers(name),
     CONSTRAINT fk_artist FOREIGN KEY (artist_name) REFERENCES Artists(name),
-    CONSTRAINT pk_liked_artists PRIMARY KEY (customer_name, artist_name),
 }
