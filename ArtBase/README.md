@@ -2,4 +2,4 @@
 
 ## ER Diagram
 
-![ER Diagram](ArtBase.svg)
+![ER Diagram](ER.svg)
