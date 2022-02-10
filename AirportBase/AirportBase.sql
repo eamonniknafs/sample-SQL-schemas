@@ -63,7 +63,7 @@ CREATE TABLE Test_Event (
     test_number INT,
     reg_number VARCHAR(5),
     ssn VARCHAR(9),
-    date DATE;
+    date DATE,
     number_hours INT,
     score INT,
     CONSTRAINT fk_event_test_number FOREIGN KEY (test_number) REFERENCES Tests(test_number),
